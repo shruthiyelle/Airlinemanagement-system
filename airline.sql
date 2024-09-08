@@ -1,0 +1,20 @@
+
+create database airlinemanagementsystem;
+use airlinemanagementsystem;
+create table login(username varchar(20),password varchar(20));
+show tables;
+insert into login values("admin","admin");
+select * from login;
+create table passenger(name varchar(20),nationality varchar(20),phone varchar(20),address varchar(50),aadhar varchar(20),gender varchar(10));
+select * from passenger;
+create table flight(f_code varchar(20),fname varchar(50),source varchar(40),destination varchar(50));
+describe flight;
+insert into flight values("1001","AI-1212","Delhi","Mumbai");
+insert into flight values("1002","AI-1453","Delhi","Goa");
+insert into flight values("1003","AI-1112","Mumbai","Chennai");
+insert into flight values("1004","AI-1213","Goa","Mumbai");
+insert into flight values("1005","AI-1543","Gujarat","Mumbai");
+select * from flight;
+create table reservation(PNR varchar(15),TICKET varchar(20),aadhar varchar(20),name varchar(20),nationality varchar(20),flightname varchar(20),flightcode varchar(20),src varchar(20),dest varchar(20),ddate varchar(30) );
+select * from reservation;
+create table cancel(pnr varchar(20),name varchar(20),cancelno varchar(20),fcode varchar(20),ddate varchar(20));
